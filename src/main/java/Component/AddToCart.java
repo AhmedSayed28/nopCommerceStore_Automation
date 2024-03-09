@@ -29,18 +29,15 @@ public class AddToCart extends Base {
         List<WebElement> addToCartButtons = driver.findElements(By.cssSelector("button[class=\"button-2 product-box-add-to-cart-button\"]"));
         for (WebElement button : addToCartButtons){
             click(waitUntilElementToBeClickable(button));
-            Thread.sleep(1500);
+            Thread.sleep(1000);
         }
         click(waitUntilElementToBeClickable(cartLinkLocator));
-        Thread.sleep(1000);
     }
     public void updateQty(int quantity) throws InterruptedException {
         List<WebElement> quantityInputLocator = driver.findElements(By.cssSelector("input[aria-label=\"Qty.\"]"));
         for (WebElement quantityInputElement : quantityInputLocator){
             setTextElement(quantityInputElement,String.valueOf(quantity));
-            Thread.sleep(1500);
         }
-        Thread.sleep(1000);
         click(waitUntilElementToBeClickable(updateCartBtnLocator));
     }
     public void printProductTotalPrice(){

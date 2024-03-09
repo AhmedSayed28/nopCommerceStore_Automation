@@ -14,6 +14,7 @@ public class AddToCartTest extends BaseTest {
         cart.updateQty(3);
         cart.updateQty(2);
         cart.printProductTotalPrice();
+
         System.out.println("Total Cart Price: " + cart.calcTotalPrice());
         System.out.println("Dom Total Price: " + cart.getTotalPrice());
         Assert.assertEquals(cart.calcTotalPrice(), cart.getTotalPrice(),"Total Cart Price: " + cart.calcTotalPrice() + "Calculated Successfully " );
