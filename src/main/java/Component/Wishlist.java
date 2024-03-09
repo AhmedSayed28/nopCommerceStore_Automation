@@ -20,6 +20,7 @@ public class Wishlist extends Base{
     }
 
     public void addRandomProducts() throws InterruptedException {
+        driver.navigate().to("https://demo.nopcommerce.com/cell-phones");
         List<WebElement> products = driver.findElements(By.cssSelector("button[class=\"button-2 add-to-wishlist-button\"]"));
         for (WebElement product : products){
             Thread.sleep(1000);

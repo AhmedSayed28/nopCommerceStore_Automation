@@ -24,7 +24,7 @@ public class Base {
         PageFactory.initElements(driver,this);
     }
     protected void setTextElement(WebElement textBox, String value){
-        textBox.click();
+        textBox.clear();
         textBox.sendKeys(value);
     }
     protected WebElement waitUntilElementToBeVisible(By locator){
